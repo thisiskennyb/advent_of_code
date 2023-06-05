@@ -1,5 +1,4 @@
 def calorie_counting(text_file):
-    most_calories = 0
     calorie_counter = 0
     cals_per_elf = []
     with open(text_file, 'r') as infile:
