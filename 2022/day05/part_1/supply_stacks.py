@@ -15,11 +15,13 @@ def supply_stacks(text_file):
         
 # creates two dictionaries, stack_dict key=column# value=[]
 # index_dict key=index of column number value=column number corresponding to index
+        
         column_numbers = stack_row_list.pop()
         for i in range(len(column_numbers)):
             if column_numbers[i].isdigit():
                 index_dict[i] = column_numbers[i]
                 stack_dict[column_numbers[i]] = []
+                print(stack_dict)
 
 
 # fills the stack dictionary with the default box stack configiration 
@@ -27,7 +29,7 @@ def supply_stacks(text_file):
             for j in range(len(row)):
                 if row[j].isalpha():
                     stack_dict[index_dict[j]].append(row[j])
-                    
+                    print(stack_dict)
 
         return stack_dict
 
